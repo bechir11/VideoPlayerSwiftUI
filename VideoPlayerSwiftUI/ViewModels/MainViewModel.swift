@@ -42,7 +42,7 @@ class MainViewModel: ObservableObject {
     
     @MainActor
     func updateContries(with videos: [Video]) {
-        orderingVideosByDate(with: videos)
+        orderingVideosListByDate(with: videos)
         if let firstVideo = self.videos.first, let url = URL(string: firstVideo.fullURL) {
             setupPlayer(with: url)
         }
@@ -59,7 +59,7 @@ class MainViewModel: ObservableObject {
         player.allowsExternalPlayback = false
     }
     
-    func orderingVideosByDate(with videos: [Video]) {
+    func orderingVideosListByDate(with videos: [Video]) {
         self.videos = videos.sorted { video1, video2 in
             video1.publishedAt > video2.publishedAt
         }
