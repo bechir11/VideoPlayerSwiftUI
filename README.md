@@ -10,7 +10,7 @@
 
 ## Introduction
 
-#### This app can display videos with their title, author name and a description, this app supports portrait and landscape modes.
+#### This app can display videos with their title, author name and a description, this app supports portrait and landscape modes. https://github.com/silverorange/native-app-dev-2022-04
 
 ## Requirements
 
