@@ -19,6 +19,7 @@ struct MainView: View {
         NavigationView {
             Group {
                 GeometryReader { geometry in
+                    //displaying a progress view until loading the data from the API
                     if viewModel.videos.isEmpty {
                         HStack {
                             VStack {
@@ -39,6 +40,7 @@ struct MainView: View {
                         ZStack {
                             VStack {
                                 ZStack {
+                                    //using AVPlayerViewControllerRepresentable to hide the native playback controls and adding our logic for playing previous/next video
                                     playerView()
                                     HStack {
                                         playerButtons(image: "previous", size: 55)
@@ -52,6 +54,7 @@ struct MainView: View {
                                                     }
                                                 }
                                             }
+                                        //making the button insensitive when start video list
                                             .opacity(viewModel.playerIndex == 0 ? 0.3 : 1)
                                             .disabled(viewModel.playerIndex == 0)
                                         if !viewModel.isPlaying {
@@ -81,6 +84,7 @@ struct MainView: View {
                                                     }
                                                 }
                                             }
+                                        //making the button insensitive when end video list
                                             .opacity(viewModel.playerIndex == viewModel.videos.count-1 ? 0.3 : 1)
                                             .disabled(viewModel.playerIndex == viewModel.videos.count-1)
                                     }
@@ -93,11 +97,13 @@ struct MainView: View {
                                                                title: viewModel.videos[viewModel.playerIndex].title,
                                                                authorName: viewModel.videos[viewModel.playerIndex].author.name,
                                                                description: viewModel.videos[viewModel.playerIndex].description)
+                                // using webView representable to display the description content on the view
                                 WebViewRepresentable(htmlContent: htmlContent, didFinishLoading: $webViewDidFinishLoading)
                                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                                             .padding(5)
                             }
                             .opacity(webViewDidFinishLoading ? 1:0)
+                            //displaying a progress view until loading the web view with the content
                             if !webViewDidFinishLoading {
                                 VStack {
                                     Spacer()

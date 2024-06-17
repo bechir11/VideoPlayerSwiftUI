@@ -37,6 +37,7 @@ struct WebViewRepresentable: UIViewRepresentable {
            }
            
            func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+               //notifing the view that webView did finish loading the content
                parent.didFinishLoading = true
            }
            

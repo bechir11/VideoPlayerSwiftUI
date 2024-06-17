@@ -14,8 +14,10 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> AVPlayerViewController {
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
+        //hiding the playback controls
         playerViewController.showsPlaybackControls = false
-        playerViewController.videoGravity = .resizeAspect // Ensures the video maintains its aspect ratio
+        // Ensures the video maintains its aspect ratio
+        playerViewController.videoGravity = .resizeAspect
         return playerViewController
     }
 
