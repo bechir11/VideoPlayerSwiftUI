@@ -2,15 +2,23 @@
 
 # VideoPlayerSwiftUI Project
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Installation](#installation)
+
+## Introduction
+
 #### This app can display videos with their title, author name and a description, this app supports portrait and landscape modes.
 
-##### 1- Requirements
+## Requirements
 
 - iOS 14.0 or later
 - Xcode 12.0 or later
 - Swift 5.0 or later
 
-##### 2- Installation
+## Installation
 
 - Clone the repository:
   - `git clone https://github.com/bechir11/VideoPlayerSwiftUI.git`
