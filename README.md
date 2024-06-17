@@ -31,5 +31,15 @@
 
 - Open the project in Xcode
   - `open VideoPlayerSwiftUI.xcworkspace`
+ 
+- Running the Server
+The provided API server is needed as a data source for your project. To run the server you will need NodeJS and Yarn.
+
+    On macOS you can install the requirements using Homebrew (installation instructions) with:
+    - `brew install node yarn`
+    - `cd server`
+    - `yarn install`
+    - `yarn start`
+#### You can verify the API is working by visiting http://localhost:4000/videos in your browser or another HTTP client.
 
 ###### Thank you for checking the project.
