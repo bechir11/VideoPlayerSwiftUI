@@ -2,7 +2,7 @@
 
 # VideoPlayerSwiftUI Project
 
-#### This app can display videos with their title, author name and a description.
+#### This app can display videos with their title, author name and a description, this app supports portrait and landscape modes.
 
 ##### 1- Requirements
 
